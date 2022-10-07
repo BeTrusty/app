@@ -1,50 +1,66 @@
-import React, { useContext, useState } from 'react'
-import { NextPage } from 'next'
-//import { trpc } from '../utils/trpc'
-import SwipeableViews from 'react-swipeable-views'
+import { GetServerSidePropsContext } from 'next'
+import { getSession } from 'next-auth/react'
+import { Session } from 'next-auth'
+import React, { useEffect, useContext } from 'react'
 import { Context } from '../context'
 import { Header } from '@components/Header'
+import { Profile } from '@components/Profile'
 import { Button } from '@components/Button'
-import { Features } from '@components/Features'
-import { Login } from '@components/Login'
 
-const Home: NextPage = () => {
-  // const hello = trpc.useQuery(['example.hello', { text: 'from tRPC' }])
-  const { indexSlide, setIndexSlide, viewButton, setViewButton } = useContext(
+function Home ({ session }: object) {
+  const { setMySession, setName, setEmail, setProfilePicture } = useContext(
     Context
   )
-  if (indexSlide > 2) {
-    setViewButton(false)
-  }
+  useEffect(() => {
+    setMySession(session)
+    setName(session.user.name)
+    setEmail(session.user.email)
+    setProfilePicture(session.user.image)
+  })
   return (
     <>
-      <main className='flex min-h-screen flex-col justify-start p-8 bg-dark'>
+      <main className='flex min-h-screen flex-col justify-start p-8 bg-dark mx-auto text-center text-white'>
         <Header />
-        <SwipeableViews index={indexSlide}>
-          <Features
-            img='/img/identidad.png'
-            text='Identidad digital para tu inmueble.'
-          />
-          <Features
-            img='/img/certificacion.png'
-            text='Certificación de la existencia real y trazabilidad.'
-          />
-          <Features
-            img='/img/NFT.png'
-            text='Mintea tu NFT y adueñate de tu
-          propiedad digital.'
-          />
-          <Login />
-        </SwipeableViews>
-        {viewButton && (
+        <Profile />
+        <h4 className='my-2'>Cuenta no verificada (no puedes mintear NFTs).</h4>
+        <section className='flex flex-col gap-3 mt-7'>
           <Button
-            content='Continuar'
-            onClick={() => setIndexSlide(indexSlide + 1)}
+            content='Marketplace'
+            onClick={() => console.log('marketplace')}
           />
-        )}
+          <Button
+            content='Mintear NFT'
+            onClick={() => console.log('mintear NFT')}
+          />
+          <Button
+            content='Mi wallet'
+            onClick={() => console.log('mi wallet')}
+          />
+          <Button
+            content='Panel inquilino'
+            onClick={() => console.log('Panel inquilino')}
+          />
+        </section>
       </main>
     </>
   )
 }
 
 export default Home
+
+export async function getServerSideProps (context: GetServerSidePropsContext) {
+  const session = await getSession(context)
+  // redirect if not authenticated
+  if (!session) {
+    return {
+      props: { session },
+      redirect: {
+        destination: '/signin',
+        permanent: false
+      }
+    }
+  }
+  return {
+    props: { session }
+  }
+}

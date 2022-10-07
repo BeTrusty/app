@@ -1,4 +1,5 @@
 import React from 'react'
+import { signIn } from 'next-auth/react'
 import { ButtonLogin } from '@components/ButtonLogin'
 
 function Login () {
@@ -8,12 +9,22 @@ function Login () {
       <ButtonLogin
         content='Acceder con Google'
         img='/img/logo-google--white.png'
-        onClick={() => console.log('Me conecté con google')}
+        onClick={() =>
+          signIn('google', {
+            redirect: false,
+            callbackUrl: '/'
+          })
+        }
       />
       <ButtonLogin
         content='Acceder con Twitter'
         img='/img/logo-twitter--white.png'
-        onClick={() => console.log('Me conecté con twitter')}
+        onClick={() =>
+          signIn('twitter', {
+            redirect: false,
+            callbackUrl: '/'
+          })
+        }
       />
       <ButtonLogin
         content='Link de acceso o email'

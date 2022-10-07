@@ -17,3 +17,8 @@ type Features = {
     img: string
     text: string
 }
+
+type GOOGLE_PROVIDER = {
+    clientId: string | undefined
+    clientSecret: string | undefined
+}
