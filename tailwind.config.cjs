@@ -5,7 +5,8 @@ module.exports = {
     colors: {
       white: '#FFFFFF',
       primary: '#33EAFF',
-      dark: '#1E1E1E'
+      dark: '#1E1E1E',
+      navbar: 'rgba(4, 4, 4, 0.25)'
     },
     extend: {}
   },

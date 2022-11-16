@@ -1,54 +1,77 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { GetServerSidePropsContext, NextPage } from 'next'
+import React, { useContext, useEffect } from 'react'
+import { GetServerSidePropsContext } from 'next'
 import { getSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
 import SwipeableViews from 'react-swipeable-views'
 import { Context } from '../context'
 import { Header } from '@components/Header'
 import { Button } from '@components/Button'
 import { Features } from '@components/Features'
-import { Login } from '@components/Login'
 import { Session } from 'next-auth'
 
 function Signin ({ session }: Session) {
-  const {
-    indexSlide,
-    setIndexSlide,
-    viewButton,
-    setViewButton,
-    setMySession
-  } = useContext(Context)
+  const { indexSlide, setIndexSlide, setMySession } = useContext<any>(Context)
+  const router = useRouter()
   useEffect(() => {
     setMySession(session)
   }, [setMySession, session])
-  if (indexSlide > 2) {
-    setViewButton(false)
+  const changeSlide = () => {
+    clearInterval(intervalo)
+    if (indexSlide < 2) {
+      setIndexSlide(indexSlide + 1)
+    } else {
+      setIndexSlide(0)
+    }
   }
+  const intervalo = setInterval(changeSlide, 3000)
+  useEffect(() => {
+    return clearInterval(intervalo)
+  })
   return (
     <>
-      <main className='flex min-h-screen flex-col justify-start p-8 bg-dark mx-auto text-center text-white'>
-        <Header />
-        <SwipeableViews index={indexSlide}>
-          <Features
-            img='/img/identidad.png'
-            text='Identidad digital para tu inmueble.'
-          />
-          <Features
-            img='/img/certificacion.png'
-            text='Certificación de la existencia real y trazabilidad.'
-          />
-          <Features
-            img='/img/NFT.png'
-            text='Mintea tu NFT y adueñate de tu
+      <main className='flex min-h-screen flex-col justify-center p-8 bg-dark mx-auto text-center text-white'>
+        <div>
+          <Header />
+          <SwipeableViews index={indexSlide} className='mb-3'>
+            <Features
+              img='/img/identidad.png'
+              text='Identidad digital para tu inmueble.'
+            />
+            <Features
+              img='/img/certificacion.png'
+              text='Certificación de la existencia real y trazabilidad.'
+            />
+            <Features
+              img='/img/NFT.png'
+              text='Mintea tu NFT y adueñate de tu
           propiedad digital.'
-          />
-          <Login />
-        </SwipeableViews>
-        {viewButton && (
-          <Button
-            content='Continuar'
-            onClick={() => setIndexSlide(indexSlide + 1)}
-          />
-        )}
+            />
+          </SwipeableViews>
+          <section className='flex flex-row justify-center items-center gap-3 mb-9'>
+            <div
+              className={
+                indexSlide === 0
+                  ? `w-3 h-3 rounded-full bg-white border-white border`
+                  : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
+              }
+            ></div>
+            <div
+              className={
+                indexSlide === 1
+                  ? `w-3 h-3 rounded-full bg-white border-white border`
+                  : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
+              }
+            ></div>
+            <div
+              className={
+                indexSlide === 2
+                  ? `w-3 h-3 rounded-full bg-white border-white border`
+                  : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
+              }
+            ></div>
+          </section>
+          <Button content='Continuar' onClick={() => router.push('/login')} />
+        </div>
       </main>
     </>
   )

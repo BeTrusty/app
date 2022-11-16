@@ -1,3 +1,7 @@
+type Session = {
+    session: JSONObject
+}
+
 type Children = {
     children: JSX.Element
 }
@@ -13,9 +17,19 @@ type ButtonLogin = {
     onClick: MouseEvent<HTMLButtonElement>
 }
 
+type ButtonWithIcon = {
+    content: string
+    children: JSX.Element
+    onClick: MouseEvent<HTMLButtonElement>
+}
+
 type Features = {
     img: string
     text: string
+}
+
+type NavBar = {
+    title: string
 }
 
 type GOOGLE_PROVIDER = {

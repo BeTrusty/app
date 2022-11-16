@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function Header () {
   return (
-    <header className='p-6 mx-auto mb-11'>
+    <header className='p-6 mx-auto mb-9'>
       <Image
         src='/img/logo.png'
         alt='Logo de BeTrusty'
