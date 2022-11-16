@@ -15,9 +15,7 @@ function Profile () {
     <section className='flex flex-col justify-center items-center gap-5 text-white text-center max-w-[400px] mx-auto'>
       <Image
         src={
-          profilePicture
-            ? profilePicture
-            : 'https://pbs.twimg.com/profile_images/1360777747673600000/pQCbhb5P_400x400.jpg'
+          profilePicture ? profilePicture : '/img/default-profile-picture.png'
         }
         alt={`Foto de perfil de ${name}`}
         width={115}
