@@ -29,47 +29,47 @@ function Signin ({ session }: Session) {
   })
   return (
     <>
-      <main className='flex min-h-screen flex-col justify-center p-8 bg-dark mx-auto text-center text-white'>
-        <div>
-          <Header />
-          <SwipeableViews index={indexSlide} className='mb-3'>
-            <Features
-              img='/img/identidad.png'
-              text='Identidad digital para tu inmueble.'
-            />
-            <Features
-              img='/img/certificacion.png'
-              text='Certificación de la existencia real y trazabilidad.'
-            />
-            <Features
-              img='/img/NFT.png'
-              text='Mintea tu NFT y adueñate de tu
+      <main className='flex min-h-screen flex-col justify-center items-center p-8 bg-dark mx-auto text-center text-white'>
+        <Header />
+        <SwipeableViews index={indexSlide} className='mb-3'>
+          <Features
+            img='/img/identidad.png'
+            text='Identidad digital para tu inmueble.'
+          />
+          <Features
+            img='/img/certificacion.png'
+            text='Certificación de la existencia real y trazabilidad.'
+          />
+          <Features
+            img='/img/NFT.png'
+            text='Mintea tu NFT y adueñate de tu
           propiedad digital.'
-            />
-          </SwipeableViews>
-          <section className='flex flex-row justify-center items-center gap-3 mb-9'>
-            <div
-              className={
-                indexSlide === 0
-                  ? `w-3 h-3 rounded-full bg-white border-white border`
-                  : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
-              }
-            ></div>
-            <div
-              className={
-                indexSlide === 1
-                  ? `w-3 h-3 rounded-full bg-white border-white border`
-                  : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
-              }
-            ></div>
-            <div
-              className={
-                indexSlide === 2
-                  ? `w-3 h-3 rounded-full bg-white border-white border`
-                  : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
-              }
-            ></div>
-          </section>
+          />
+        </SwipeableViews>
+        <section className='flex flex-row justify-center items-center gap-3 mb-9'>
+          <div
+            className={
+              indexSlide === 0
+                ? `w-3 h-3 rounded-full bg-white border-white border`
+                : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
+            }
+          ></div>
+          <div
+            className={
+              indexSlide === 1
+                ? `w-3 h-3 rounded-full bg-white border-white border`
+                : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
+            }
+          ></div>
+          <div
+            className={
+              indexSlide === 2
+                ? `w-3 h-3 rounded-full bg-white border-white border`
+                : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
+            }
+          ></div>
+        </section>
+        <div className='w-full max-w-[325px]'>
           <Button content='Continuar' onClick={() => router.push('/login')} />
         </div>
       </main>

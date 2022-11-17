@@ -47,7 +47,7 @@ function PropertyData4 () {
         <div className='flex flex-col justify-center items-start gap-2 mb-2 text-light-grey'>
           <label
             htmlFor='attach_plans'
-            className='bg-dark border-2 border-light-grey rounded-md w-full p-4 mt-4 outline-none flex flex-col justify-center items-center gap-2 lg:min-h-20 relative'
+            className='bg-dark border-2 border-light-grey rounded-md w-full p-4 mt-4 outline-none flex flex-col justify-center items-center gap-2 lg:min-h-[140px] relative'
           >
             <Image
               src='/img/plans.svg'
@@ -77,7 +77,7 @@ function PropertyData4 () {
         <div className='flex flex-col justify-center items-start gap-2 mb-2 text-light-grey'>
           <label
             htmlFor='attach_manual'
-            className='bg-dark border-2 border-light-grey rounded-md w-full p-4 mt-4 outline-none flex flex-col justify-center items-center gap-2 lg:min-h-20 relative'
+            className='bg-dark border-2 border-light-grey rounded-md w-full p-4 mt-4 outline-none flex flex-col justify-center items-center gap-2 lg:min-h-[140px] relative'
           >
             <Image
               src='/img/manual.svg'
@@ -107,7 +107,7 @@ function PropertyData4 () {
         <div className='flex flex-col justify-center items-start gap-2 mb-2 text-light-grey'>
           <label
             htmlFor='attach_deeds'
-            className='bg-dark border-2 border-light-grey rounded-md w-full p-4 mt-4 outline-none flex flex-col justify-center items-center gap-2 lg:min-h-20 relative'
+            className='bg-dark border-2 border-light-grey rounded-md w-full p-4 mt-4 outline-none flex flex-col justify-center items-center gap-2 lg:min-h-[140px] relative'
           >
             <Image
               src='/img/deeds.svg'

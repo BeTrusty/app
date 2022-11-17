@@ -7,6 +7,7 @@ import { PropertyData1 } from '@components/PropertyData1'
 import { PropertyData2 } from '@components/PropertyData2'
 import { PropertyData3 } from '@components/PropertyData3'
 import { PropertyData4 } from '@components/PropertyData4'
+import { Button } from '@components/Button'
 
 function MintearNFT () {
   const {
@@ -36,21 +37,44 @@ function MintearNFT () {
               />
             </div>
             <h4 className='text-primary font-bold text-lg md:text-2xl'>
-              {`Datos del inmueble (${indexPropertyData}/4)`}
+              {indexPropertyData === 5
+                ? 'Confirmación de minteo'
+                : `Datos del inmueble (${indexPropertyData}/4)`}
             </h4>
           </div>
-          <SwipeableViews
-            index={indexMintearNFT}
-            className='min-h-[350px] mb-6 md:min-h-full'
-          >
-            <PropertyData1 />
-            <PropertyData2 />
-            <PropertyData3 />
-            <PropertyData4 />
-            <h1>Hola</h1>
-            <h1>Como</h1>
-            <h1>Estas</h1>
-          </SwipeableViews>
+          {indexPropertyData === 5 ? (
+            <div className='w-full flex flex-col justify-center items-center gap-6 p-6 pt-0'>
+              <div className='block w-[100px] h-[100px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px]'>
+                <Image
+                  src='/img/caution.svg'
+                  alt='Datos del inmueble'
+                  width={100}
+                  height={100}
+                  objectFit='contain'
+                  layout='responsive'
+                />
+              </div>
+              <p className='text-white'>
+                Importante - si tu inmueble no es verificado por el registro
+                notarial el costo del registro quedará a cargo del usuario.
+                Continuar en caso de aceptar las condiciones.
+              </p>
+              <Button
+                content='Mintear NFT'
+                onClick={() => console.log('Mintee')}
+              />
+            </div>
+          ) : (
+            <SwipeableViews
+              index={indexMintearNFT}
+              className='min-h-[350px] mb-6 md:min-h-full'
+            >
+              <PropertyData1 />
+              <PropertyData2 />
+              <PropertyData3 />
+              <PropertyData4 />
+            </SwipeableViews>
+          )}
         </div>
       </main>
     </div>
