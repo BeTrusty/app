@@ -24,7 +24,7 @@ function Home ({ session }: Session) {
   }, [])
   return (
     <>
-      <main className='flex min-h-screen flex-col justify-start p-8 bg-dark mx-auto text-center text-white'>
+      <main className='flex min-h-screen flex-col justify-center p-8 bg-dark mx-auto text-center text-white'>
         <Header />
         <Profile />
         <h4 className='my-2'>Cuenta no verificada (no puedes mintear NFTs).</h4>

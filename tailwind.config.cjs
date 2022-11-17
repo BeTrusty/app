@@ -6,7 +6,8 @@ module.exports = {
       white: '#FFFFFF',
       primary: '#33EAFF',
       dark: '#1E1E1E',
-      navbar: 'rgba(4, 4, 4, 0.25)'
+      'light-grey': '#AFA9A9',
+      navbar: '#171717'
     },
     extend: {}
   },

@@ -11,6 +11,11 @@ type Button = {
     onClick: MouseEvent<HTMLButtonElement>
 }
 
+type ButtonDisabled = {
+    content: string
+    active: boolean
+}
+
 type ButtonLogin = {
     content: string
     img: string
