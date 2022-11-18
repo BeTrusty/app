@@ -15,7 +15,7 @@ function Signin ({ session }: Session) {
     setMySession(session)
   }, [setMySession, session])
   const changeSlide = () => {
-    //clearInterval(intervalo)
+    clearInterval(intervalo)
     if (indexSlide < 2) {
       setIndexSlide(indexSlide + 1)
     } else {
@@ -23,9 +23,6 @@ function Signin ({ session }: Session) {
     }
   }
   const intervalo = setInterval(changeSlide, 3000)
-  useEffect(() => {
-    return clearInterval(intervalo)
-  })
   return (
     <>
       <main className='flex min-h-screen flex-col justify-center items-center p-8 bg-dark mx-auto text-center text-white'>
