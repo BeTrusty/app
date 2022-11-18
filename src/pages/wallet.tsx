@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { NavBar } from '@components/NavBar'
