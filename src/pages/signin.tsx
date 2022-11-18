@@ -7,7 +7,6 @@ import { Context } from '../context'
 import { Header } from '@components/Header'
 import { Button } from '@components/Button'
 import { Features } from '@components/Features'
-import { Session } from 'next-auth'
 
 function Signin ({ session }: Session) {
   const { indexSlide, setIndexSlide, setMySession } = useContext(Context)
