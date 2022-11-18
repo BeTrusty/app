@@ -1,4 +1,5 @@
 import { GetServerSidePropsContext } from 'next'
+import Head from 'next/head'
 import { getSession } from 'next-auth/react'
 import React, { useEffect, useContext } from 'react'
 import { Context } from '../context'
@@ -24,6 +25,13 @@ function Home ({ session }: Session) {
   }, [])
   return (
     <>
+      <Head>
+        <title>Home | BeTrusty</title>
+        <meta
+          name='description'
+          content='BeTrusty es una empresa web3 enfocada en el Real Estate'
+        />
+      </Head>
       <main className='flex min-h-screen flex-col justify-center p-8 bg-dark mx-auto text-center text-white'>
         <Header />
         <Profile />

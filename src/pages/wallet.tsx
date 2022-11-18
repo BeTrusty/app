@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import Image from 'next/image'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { NavBar } from '@components/NavBar'
@@ -6,6 +7,13 @@ import { NavBar } from '@components/NavBar'
 function Wallet () {
   return (
     <div className='min-h-screen bg-dark '>
+      <Head>
+        <title>Wallet | BeTrusty</title>
+        <meta
+          name='description'
+          content='Esta es tu wallet y la puedes utilizar dentro de la apliación de BeTrusty'
+        />
+      </Head>
       <NavBar title='Wallet' />
       <main className='flex min-h-full flex-col items-center justify-start px-8 pb-8 bg-dark mx-auto text-center text-white'>
         <div className=''>

@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { GetServerSidePropsContext } from 'next'
+import Head from 'next/head'
 import { getSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import SwipeableViews from 'react-swipeable-views'
@@ -25,6 +26,13 @@ function Signin ({ session }: Session) {
   const intervalo = setInterval(changeSlide, 3000)
   return (
     <>
+      <Head>
+        <title>Signin | BeTrusty</title>
+        <meta
+          name='description'
+          content='Inicia sesión para poder utilizar BeTrusty'
+        />
+      </Head>
       <main className='flex min-h-screen flex-col justify-center items-center p-8 bg-dark mx-auto text-center text-white'>
         <Header />
         <SwipeableViews index={indexSlide} className='mb-3'>

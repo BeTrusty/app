@@ -5,6 +5,12 @@ export default function Document () {
   return (
     <Html lang='es'>
       <Head>
+        <meta charSet='UTF-8' />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name='robots' content='index, follow' />
+        <meta name='theme-color' content='#171717' />
+        <link rel='icon' href='/favicon.ico' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
           rel='preconnect'

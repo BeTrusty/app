@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react'
+import Head from 'next/head'
 import Image from 'next/image'
 import SwipeableViews from 'react-swipeable-views'
 import { Context } from '../context'
@@ -22,6 +23,13 @@ function MintearNFT () {
   }, [])
   return (
     <div className='min-h-screen bg-dark'>
+      <Head>
+        <title>Mintear NFT | BeTrusty</title>
+        <meta
+          name='description'
+          content='Preparate para mintear el NFT de tu propiedad con BeTrusty'
+        />
+      </Head>
       <NavBar title='Mintear NFT' />
       <main className='flex min-h-full flex-col items-center justify-center px-8 pb-8 bg-dark mx-auto text-center text-white'>
         <div className='max-w-[290px] md:max-w-[450px] lg:max-w-[700px]'>
