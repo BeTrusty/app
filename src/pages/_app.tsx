@@ -33,7 +33,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
-        <SessionProvider session={pageProps.session}>
+        <SessionProvider session={null}>
           <Provider>
             <>
               <Head>
