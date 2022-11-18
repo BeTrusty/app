@@ -16,7 +16,7 @@ function PropertyData2 () {
     setValueDestination,
     valuePrice,
     setValuePrice
-  } = useContext<any>(Context)
+  } = useContext(Context)
   const [activeButtonContinue, setActiveButtonContinue] = useState<boolean>(
     false
   )

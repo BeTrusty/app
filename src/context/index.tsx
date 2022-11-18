@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react'
 
-const Context = createContext({})
+const Context = createContext<ContextType | any>({})
 
 function Provider ({ children }: Children) {
   const [indexSlide, setIndexSlide] = useState<number>(0)

@@ -15,7 +15,7 @@ function MintearNFT () {
     setIndexMintearNFT,
     indexPropertyData,
     setIndexPropertyData
-  } = useContext<any>(Context)
+  } = useContext(Context)
   useEffect(() => {
     setIndexMintearNFT(0)
     setIndexPropertyData(1)

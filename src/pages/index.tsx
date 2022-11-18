@@ -12,9 +12,9 @@ import { HiIdentification } from 'react-icons/hi2'
 import { MdEmojiPeople } from 'react-icons/md'
 
 function Home ({ session }: Session) {
-  const { setMySession, setName, setEmail, setProfilePicture } = useContext<
-    any
-  >(Context)
+  const { setMySession, setName, setEmail, setProfilePicture } = useContext(
+    Context
+  )
   const router = useRouter()
   useEffect(() => {
     setMySession(session)

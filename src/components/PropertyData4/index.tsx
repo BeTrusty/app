@@ -17,7 +17,7 @@ function PropertyData4 () {
     setValueAttachReports,
     valueAttachImprovements,
     setValueAttachImprovements
-  } = useContext<any>(Context)
+  } = useContext(Context)
   const [activeButtonContinue, setActiveButtonContinue] = useState<boolean>(
     false
   )

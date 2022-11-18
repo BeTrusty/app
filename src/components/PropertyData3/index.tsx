@@ -15,7 +15,7 @@ function PropertyData3 () {
     setValueGravamen,
     valueAttachPhotos,
     setValueAttachPhotos
-  } = useContext<any>(Context)
+  } = useContext(Context)
   const [activeButtonContinue, setActiveButtonContinue] = useState<boolean>(
     false
   )
@@ -32,13 +32,6 @@ function PropertyData3 () {
     }
   })
   const [countFiles, setCountFiles] = useState<number>(0)
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      const inputFile = document.getElementById('attach_photos')
-      const lengthFiles = inputFile?.files.length
-      setCountFiles(lengthFiles)
-    }
-  }, [setCountFiles])
   return (
     <form className='w-full'>
       <section className='w-full grid place-items-center items-end lg:grid-cols-2 lg:gap-x-7 lg:gap-y-3 mb-9'>

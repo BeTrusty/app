@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import Image from 'next/image'
-import { Context } from '../../context'
+import { Context } from '@src/context'
 
 function Profile () {
   const { name, profilePicture, setProfilePicture } = useContext(Context)

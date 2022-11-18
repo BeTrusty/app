@@ -10,7 +10,7 @@ import { Features } from '@components/Features'
 import { Session } from 'next-auth'
 
 function Signin ({ session }: Session) {
-  const { indexSlide, setIndexSlide, setMySession } = useContext<any>(Context)
+  const { indexSlide, setIndexSlide, setMySession } = useContext(Context)
   const router = useRouter()
   useEffect(() => {
     setMySession(session)
