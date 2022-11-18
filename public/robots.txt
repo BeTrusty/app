@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://betrusty.vercel.app/sitemap.xml
