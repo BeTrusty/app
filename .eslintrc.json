@@ -7,6 +7,7 @@
     "@typescript-eslint"
   ],
   "extends": [
+    "./node_modules/standard/eslintrc.json",
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended"
   ]
