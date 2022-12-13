@@ -1,7 +1,6 @@
 import React from 'react'
-import { Btn } from '@src/types/index'
 
-function Button ({ content, onClick }: Btn) {
+function Button ({ content, onClick }: Button) {
   return (
     <button
       onClick={onClick}

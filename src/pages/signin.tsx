@@ -4,7 +4,6 @@ import Head from 'next/head'
 import { getSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import SwipeableViews from 'react-swipeable-views'
-import { Session } from '@src/types/index'
 import { Context } from '../context'
 import { Header } from '@components/Header'
 import { Button } from '@components/Button'
@@ -55,22 +54,22 @@ function Signin ({ session }: Session) {
           <div
             className={
               indexSlide === 0
-                ? 'w-3 h-3 rounded-full bg-white border-white border'
-                : 'w-3 h-3 rounded-full bg-opacity-0 border-white border'
+                ? `w-3 h-3 rounded-full bg-white border-white border`
+                : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
             }
           ></div>
           <div
             className={
               indexSlide === 1
-                ? 'w-3 h-3 rounded-full bg-white border-white border'
-                : 'w-3 h-3 rounded-full bg-opacity-0 border-white border'
+                ? `w-3 h-3 rounded-full bg-white border-white border`
+                : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
             }
           ></div>
           <div
             className={
               indexSlide === 2
-                ? 'w-3 h-3 rounded-full bg-white border-white border'
-                : 'w-3 h-3 rounded-full bg-opacity-0 border-white border'
+                ? `w-3 h-3 rounded-full bg-white border-white border`
+                : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
             }
           ></div>
         </section>

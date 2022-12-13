@@ -1,7 +1,6 @@
 import React from 'react'
-import { BtnDisabled } from '@src/types/index'
 
-function ButtonDisabled ({ content, active }: BtnDisabled) {
+function ButtonDisabled ({ content, active }: ButtonDisabled) {
   return (
     <button
       disabled={active}

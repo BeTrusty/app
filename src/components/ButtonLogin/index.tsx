@@ -1,8 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import { BtnLogin } from '@src/types/index'
 
-function ButtonLogin ({ content, img, onClick }: BtnLogin) {
+function ButtonLogin ({ content, img, onClick }: ButtonLogin) {
   return (
     <button
       onClick={onClick}

@@ -2,19 +2,20 @@ import { GetServerSidePropsContext } from 'next'
 import Head from 'next/head'
 import { getSession } from 'next-auth/react'
 import React, { useEffect, useContext } from 'react'
-import { Session } from '@src/types/index'
 import { Context } from '../context'
 import { Header } from '@components/Header'
 import { Profile } from '@components/Profile'
 import { ButtonWithIcon } from '@components/ButtonWithIcon'
 import { useRouter } from 'next/router'
-import { FaShoppingCart, FaWallet } from 'react-icons/fa'
+import { FaShoppingCart } from 'react-icons/fa'
+import { FaWallet } from 'react-icons/fa'
 import { HiIdentification } from 'react-icons/hi2'
 import { MdEmojiPeople } from 'react-icons/md'
 
 function Home ({ session }: Session) {
-  const { setMySession, setName, setEmail, setProfilePicture } =
-    useContext(Context)
+  const { setMySession, setName, setEmail, setProfilePicture } = useContext(
+    Context
+  )
   const router = useRouter()
   useEffect(() => {
     setMySession(session)

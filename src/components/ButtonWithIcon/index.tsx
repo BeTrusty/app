@@ -1,7 +1,7 @@
 import React from 'react'
-import { BtnWithIcon } from '@src/types/index'
+import Image from 'next/image'
 
-function ButtonWithIcon ({ content, children, onClick }: BtnWithIcon) {
+function ButtonWithIcon ({ content, children, onClick }: ButtonWithIcon) {
   return (
     <button
       onClick={onClick}
