@@ -27,7 +27,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "types": [
+      "react"
+    ]
   },
   "include": [
     "next-env.d.ts",

@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { ButtonWithIcon } from '@src/types/index'
 
 function ButtonWithIcon ({ content, children, onClick }: ButtonWithIcon) {
   return (

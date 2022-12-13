@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from '@src/types/index'
 
 function Button ({ content, onClick }: Button) {
   return (

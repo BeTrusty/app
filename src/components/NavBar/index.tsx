@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { BiLeftArrowAlt } from 'react-icons/bi'
+import { NavBar } from '@src/types/index'
 
 function NavBar ({ title }: NavBar) {
   const router = useRouter()

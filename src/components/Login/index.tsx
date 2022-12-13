@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-curly-newline */
 import React from 'react'
 import { signIn } from 'next-auth/react'
 import { ButtonLogin } from '@components/ButtonLogin'

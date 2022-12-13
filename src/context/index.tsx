@@ -1,3 +1,4 @@
+import { Children, ContextType } from '@src/types/index'
 import React, { createContext, useState } from 'react'
 
 const Context = createContext<ContextType | any>({})
@@ -39,9 +40,8 @@ function Provider ({ children }: Children) {
   const [valueAttachManual, setValueAttachManual] = useState<string>('')
   const [valueAttachDeeds, setValueAttachDeeds] = useState<string>('')
   const [valueAttachReports, setValueAttachReports] = useState<string>('')
-  const [valueAttachImprovements, setValueAttachImprovements] = useState<
-    string
-  >('')
+  const [valueAttachImprovements, setValueAttachImprovements] =
+    useState<string>('')
   const continueClickMintearNFT = (e: Event) => {
     e.preventDefault()
     setIndexPropertyData(indexPropertyData + 1)

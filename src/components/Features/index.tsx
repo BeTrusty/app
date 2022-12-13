@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { Features } from '@src/types/index'
 
 function Features ({ img, text }: Features) {
   return (

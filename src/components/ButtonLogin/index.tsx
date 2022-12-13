@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { ButtonLogin } from '@src/types/index'
 
 function ButtonLogin ({ content, img, onClick }: ButtonLogin) {
   return (

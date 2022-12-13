@@ -17,9 +17,8 @@ function PropertyData2 () {
     valuePrice,
     setValuePrice
   } = useContext(Context)
-  const [activeButtonContinue, setActiveButtonContinue] = useState<boolean>(
-    false
-  )
+  const [activeButtonContinue, setActiveButtonContinue] =
+    useState<boolean>(false)
   useEffect(() => {
     if (
       valueDepto !== '' &&

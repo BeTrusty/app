@@ -1,9 +1,7 @@
-/* eslint-disable multiline-ternary */
 import React, { useState, useContext, useEffect } from 'react'
 import { Context } from '@src/context'
 import { Button } from '@components/Button'
 import { ButtonDisabled } from '@components/ButtonDisabled'
-import ReCaptcha from 'react-google-recaptcha'
 
 function PropertyData1 () {
   const {
@@ -118,10 +116,6 @@ function PropertyData1 () {
       ) : (
         <ButtonDisabled content='Continuar' active={activeButtonContinue} />
       )}
-      <ReCaptcha
-        sitekey='6LeUWnYjAAAAAE5Gyhz2lE-mf9xhZCEqsJoMvkzbP'
-        onChange={value => console.log('Recaptcha value:', value)}
-      />
     </form>
   )
 }

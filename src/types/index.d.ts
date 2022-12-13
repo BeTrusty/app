@@ -1,48 +1,49 @@
-type Session = {
+/* eslint-disable no-undef */
+export type Session = {
     session: JSONObject
 }
 
-type Children = {
+export type Children = {
     children: JSX.Element
 }
 
-type Button = {
+export type Button = {
     content: string
     onClick: MouseEvent<HTMLButtonElement>
 }
 
-type ButtonDisabled = {
+export type ButtonDisabled = {
     content: string
     active: boolean
 }
 
-type ButtonLogin = {
+export type ButtonLogin = {
     content: string
     img: string
     onClick: MouseEvent<HTMLButtonElement>
 }
 
-type ButtonWithIcon = {
+export type ButtonWithIcon = {
     content: string
     children: JSX.Element
     onClick: MouseEvent<HTMLButtonElement>
 }
 
-type Features = {
+export type Features = {
     img: string
     text: string
 }
 
-type NavBar = {
+export type NavBar = {
     title: string
 }
 
-type GOOGLE_PROVIDER = {
+export type GOOGLE_PROVIDER = {
     clientId: string | undefined
     clientSecret: string | undefined
 }
 
-interface ContextType {
+export interface ContextType {
     indexSlide: number
     setIndexSlide: (a: number) => void
     viewButton: boolean

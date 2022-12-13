@@ -1,4 +1,5 @@
 import React from 'react'
+import { ButtonDisabled } from '@src/types/index'
 
 function ButtonDisabled ({ content, active }: ButtonDisabled) {
   return (
