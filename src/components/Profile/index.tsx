@@ -14,9 +14,7 @@ function Profile () {
   return (
     <section className='flex flex-col justify-center items-center gap-5 text-white text-center max-w-[400px] mx-auto'>
       <Image
-        src={
-          profilePicture ? profilePicture : '/img/default-profile-picture.png'
-        }
+        src={profilePicture || '/img/default-profile-picture.png'}
         alt={`Foto de perfil de ${name}`}
         width={115}
         height={115}

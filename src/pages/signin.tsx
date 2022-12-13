@@ -54,24 +54,24 @@ function Signin ({ session }: Session) {
           <div
             className={
               indexSlide === 0
-                ? `w-3 h-3 rounded-full bg-white border-white border`
-                : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
+                ? 'w-3 h-3 rounded-full bg-white border-white border'
+                : 'w-3 h-3 rounded-full bg-opacity-0 border-white border'
             }
-          ></div>
+          />
           <div
             className={
               indexSlide === 1
-                ? `w-3 h-3 rounded-full bg-white border-white border`
-                : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
+                ? 'w-3 h-3 rounded-full bg-white border-white border'
+                : 'w-3 h-3 rounded-full bg-opacity-0 border-white border'
             }
-          ></div>
+          />
           <div
             className={
               indexSlide === 2
-                ? `w-3 h-3 rounded-full bg-white border-white border`
-                : `w-3 h-3 rounded-full bg-opacity-0 border-white border`
+                ? 'w-3 h-3 rounded-full bg-white border-white border'
+                : 'w-3 h-3 rounded-full bg-opacity-0 border-white border'
             }
-          ></div>
+          />
         </section>
         <div className='w-full max-w-[325px]'>
           <Button content='Continuar' onClick={() => router.push('/login')} />

@@ -1,14 +1,20 @@
 {
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "project": "./tsconfig.json"
-    },
-    "plugins": [
-        "@typescript-eslint"
-    ],
-    "extends": [
-        "./node_modules/standard/eslintrc.json",
-        "next/core-web-vitals",
-        "plugin:@typescript-eslint/recommended"
-    ]
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "./node_modules/standard/eslintrc.json",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "react/jsx-curly-newline": "off",
+    "multiline-ternary": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/exhaustive-deps": "off"
+  }
 }
