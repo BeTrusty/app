@@ -12,29 +12,29 @@ export interface Btn {
   onClick: MouseEvent<HTMLButtonElement>
 }
 
-export interface ButtonDisabled {
+export interface BtnDisabled {
   content: string
   active: boolean
 }
 
-export interface ButtonLogin {
+export interface BtnLogin {
   content: string
   img: string
   onClick: MouseEvent<HTMLButtonElement>
 }
 
-export interface ButtonWithIcon {
+export interface BtnWithIcon {
   content: string
   children: JSX.Element
   onClick: MouseEvent<HTMLButtonElement>
 }
 
-export interface Features {
+export interface TypeFeatures {
   img: string
   text: string
 }
 
-export interface NavBar {
+export interface TypeNavBar {
   title: string
 }
 

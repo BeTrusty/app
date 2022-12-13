@@ -21,6 +21,14 @@
         "react"
     ],
     "rules": {
-        "@typescript-eslint/explicit-function-return-type": "off"
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-misused-promises": "off",
+        "@typescript-eslint/return-await": "off",
+        "@typescript-eslint/promise-function-async": "off",
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/indent": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/restrict-plus-operands": "off",
+        "multiline-ternary": "off"
     }
 }

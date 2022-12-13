@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
-import { Features } from '@src/types/index'
+import { TypeFeatures } from '@src/types/index'
 
-function Features ({ img, text }: Features) {
+function Features ({ img, text }: TypeFeatures) {
   return (
     <section className='flex flex-col justify-center gap-5 text-white text-center max-w-[290px] mx-auto'>
       <Image
