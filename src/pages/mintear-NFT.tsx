@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import { GetServerSidePropsContext } from 'next'
+import { getSession } from 'next-auth/react'
 import SwipeableViews from 'react-swipeable-views'
 import { Context } from '../context'
 import { NavBar } from '@components/NavBar'
@@ -90,3 +92,20 @@ function MintearNFT () {
 }
 
 export default MintearNFT
+
+export async function getServerSideProps (context: GetServerSidePropsContext) {
+  const session = await getSession(context)
+  // redirect if not authenticated
+  if (!session) {
+    return {
+      props: { session },
+      redirect: {
+        destination: '/signin',
+        permanent: false
+      }
+    }
+  }
+  return {
+    props: { session }
+  }
+}
