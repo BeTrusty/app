@@ -1,12 +1,7 @@
 /* eslint-disable no-undef */
-type user = {
-  name: string
-  email: string
-  image: string
-}
 export interface Session {
+  [x: string]: any
   session: JSONObject
-  user: user
 }
 
 export interface Children {
