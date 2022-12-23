@@ -2,7 +2,7 @@ import { useEffect, useContext } from 'react'
 import { Context } from '@src/context'
 import { Session } from '@src/types'
 
-const useSession = ({ session }: { session: Session }): void => {
+const useSession = (session: Session): void => {
   const { setMySession, setName, setEmail, setProfilePicture } =
     useContext(Context)
   useEffect(() => {
