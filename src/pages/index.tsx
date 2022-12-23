@@ -1,8 +1,7 @@
 import { GetServerSidePropsContext } from 'next'
 import Head from 'next/head'
 import { getSession } from 'next-auth/react'
-import React, { useEffect, useContext } from 'react'
-import { Context } from '../context'
+import React from 'react'
 import { Header } from '@components/Header'
 import { Profile } from '@components/Profile'
 import { ButtonWithIcon } from '@components/ButtonWithIcon'
@@ -10,17 +9,11 @@ import { useRouter } from 'next/router'
 import { FaShoppingCart, FaWallet } from 'react-icons/fa'
 import { HiIdentification } from 'react-icons/hi2'
 import { MdEmojiPeople } from 'react-icons/md'
+import { useSession } from '@src/hooks/useSession'
 
 function Home ({ session }: Session) {
-  const { setMySession, setName, setEmail, setProfilePicture } =
-    useContext(Context)
+  useSession(session)
   const router = useRouter()
-  useEffect(() => {
-    setMySession(session)
-    setName(session.user.name)
-    setEmail(session.user.email)
-    setProfilePicture(session.user.image)
-  }, [])
   return (
     <>
       <Head>
