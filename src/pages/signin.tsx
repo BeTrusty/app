@@ -23,7 +23,8 @@ function Signin ({ session }: Session) {
       setIndexSlide(0)
     }
   }
-  const intervalo = setInterval(changeSlide, 3000)
+  const intervalo = setInterval(changeSlide, 2000)
+
   return (
     <>
       <Head>

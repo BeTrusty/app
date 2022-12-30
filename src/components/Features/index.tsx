@@ -10,6 +10,7 @@ function Features ({ img, text }: Features) {
         width={320}
         height={180}
         objectFit='contain'
+        priority
       />
       <h3>{text}</h3>
     </section>

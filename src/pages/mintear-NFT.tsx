@@ -44,6 +44,7 @@ function MintearNFT () {
                 height={50}
                 objectFit='contain'
                 layout='responsive'
+                priority
               />
             </div>
             <h4 className='text-primary font-bold text-lg md:text-2xl'>

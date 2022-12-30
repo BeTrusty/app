@@ -10,6 +10,7 @@ function Header () {
         width={290}
         height={70}
         objectFit='contain'
+        priority
       />
     </header>
   )

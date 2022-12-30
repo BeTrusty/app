@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 function ButtonLogin ({ content, img, onClick }: ButtonLogin) {
+  console.log(`Botón ${content} renderizado`)
   return (
     <button
       onClick={onClick}
@@ -13,6 +14,7 @@ function ButtonLogin ({ content, img, onClick }: ButtonLogin) {
         width={20}
         height={20}
         objectFit='contain'
+        priority
       />
       {content}
     </button>

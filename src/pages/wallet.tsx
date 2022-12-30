@@ -28,12 +28,15 @@ function Wallet () {
                 height={50}
                 objectFit='contain'
                 layout='responsive'
+                priority
               />
             </div>
             <h4 className='text-primary font-bold text-2xl lg:text-3xl'>
               Mi Wallet
             </h4>
-            <ConnectButton />
+            <div id='connect-wallet'>
+              <ConnectButton />
+            </div>
           </div>
         </div>
       </main>
